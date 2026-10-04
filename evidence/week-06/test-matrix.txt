@@ -1,0 +1,33 @@
+PERTEMUAN 6 – TEST MATRIX
+
+| No | Peserta   | Kursus        | Paket | Harga/Total yang Diharapkan | Status |
+| -- | --------- | ------------- | ----: | --------------------------: | ------ |
+| 01 | Mahasiswa | Web Dasar     |     1 |                   Rp240.000 | PASS   |
+| 02 | Guru      | PHP Dasar     |     1 |                   Rp340.000 | PASS   |
+| 03 | Umum      | Laravel Dasar |     1 |                   Rp500.000 | PASS   |
+| 04 | Mahasiswa | Web Dasar     |     2 |                   Rp480.000 | PASS   |
+| 05 | Guru      | PHP Dasar     |     2 |                   Rp680.000 | PASS   |
+| 06 | Umum      | Laravel Dasar |     2 |                 Rp1.000.000 | PASS   |
+| 07 | Mahasiswa | PHP Dasar     |     1 |      Sesuai harga mahasiswa | PASS   |
+| 08 | Guru      | Web Dasar     |     1 |           Sesuai harga guru | PASS   |
+| 09 | Umum      | PHP Dasar     |     1 |           Sesuai harga umum | PASS   |
+| 10 | Mahasiswa | Laravel Dasar |     2 |    Sesuai perhitungan paket | PASS   |
+
+
+PERTEMUAN 6 – TEST MATRIX
+
+1. Mahasiswa + Web Dasar + 1 paket → Rp240.000 : PASS
+2. Guru + PHP Dasar + 1 paket → Rp340.000 : PASS
+3. Umum + Laravel Dasar + 1 paket → Rp500.000 : PASS
+4. Mahasiswa + Web Dasar + 2 paket → Rp480.000 : PASS
+5. Guru + PHP Dasar + 2 paket → Rp680.000 : PASS
+6. Umum + Laravel Dasar + 2 paket → Rp1.000.000 : PASS
+7. Mahasiswa + PHP Dasar + 1 paket → sesuai harga mahasiswa : PASS
+8. Guru + Web Dasar + 1 paket → sesuai harga guru : PASS
+9. Umum + PHP Dasar + 1 paket → sesuai harga umum : PASS
+10. Mahasiswa + Laravel Dasar + 2 paket → sesuai perhitungan paket : PASS
+11. Guru + Laravel Dasar + 1 paket + diskon → total setelah diskon : PASS
+12. Mahasiswa + PHP Dasar + 2 paket + diskon → total setelah diskon : PASS
+13. Input peserta kosong → muncul pesan validasi : PASS
+14. Input kursus kosong → muncul pesan validasi : PASS
+15. Jumlah paket tidak valid → muncul pesan kesalahan : PASS
