@@ -1,120 +1,52 @@
 <?php
 
-$history = [
-    [
-        'name' => 'Gevi Melita sari',
-        'course' => 'PHP Dasar',
-        'total' => 225000
-    ],
-    [
-        'name' => 'Desti Anggraini',
-        'course' => 'Web Dasar',
-        'total' => 180000
-    ],
-    [
-        'name' => 'Aqila Nurul Azwa',
-        'course' => 'Laravel Fundamental',
-        'total' => 297500
-    ],
-    [
-        'name' => 'Muhammad Rifki Siregar',
-        'course' => 'MySQL Dasar',
-        'total' => 261250
-    ]
+declare(strict_types=1);
+
+require __DIR__ . '/helpers.php';
+
+$registrations = [
+    ['name' => 'Alya Putri', 'course' => 'Web Dasar', 'total' => 240000],
+    ['name' => 'Bima Saputra', 'course' => 'PHP Dasar', 'total' => 340000],
+    ['name' => 'Citra Rahma', 'course' => 'Laravel Dasar', 'total' => 500000],
+    ['name' => 'Dani Akbar', 'course' => 'Web Dasar', 'total' => 480000],
 ];
-
 ?>
-
 <!doctype html>
 <html lang="id">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>History Pendaftaran - KursusKu</title>
-
+    <title>History Dummy - KursusKu</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body class="utility-page">
+<main class="utility-card wide-card">
+    <span class="eyebrow">MILESTONE 6 · FOREACH</span>
+    <h1>History Pendaftaran Dummy</h1>
+    <p>Data ini adalah latihan array + looping, bukan database dan bukan CRUD.</p>
 
-<body>
-
-<main class="container">
-
-    <section class="page-intro">
-
-        <p class="eyebrow">
-            Milestone 6 • Foreach
-        </p>
-
-        <h1>
-            History Pendaftaran Dummy
-        </h1>
-
-        <p>
-            Data ini adalah latihan array + looping, bukan database dan bukan CRUD.
-        </p>
-
-    </section>
-
-    <section class="form-card">
-
-        <table>
-
+    <div class="table-wrap">
+        <table class="course-table compact-table">
             <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Nama</th>
-                    <th>Kursus</th>
-                    <th>Total</th>
-                </tr>
+            <tr><th>No.</th><th>Nama</th><th>Kursus</th><th>Total</th></tr>
             </thead>
-
             <tbody>
-
-                <?php foreach ($history as $index => $data): ?>
-
-                    <tr>
-
-                        <td>
-                            <?= $index + 1 ?>
-                        </td>
-
-                        <td>
-                            <?= htmlspecialchars($data['name']) ?>
-                        </td>
-
-                        <td>
-                            <?= htmlspecialchars($data['course']) ?>
-                        </td>
-
-                        <td>
-                            Rp <?= number_format($data['total'], 0, ',', '.') ?>
-                        </td>
-
-                    </tr>
-
-                <?php endforeach; ?>
-
+            <?php foreach ($registrations as $index => $item): ?>
+                <tr>
+                    <td><?= $index + 1 ?></td>
+                    <td><?= e($item['name']) ?></td>
+                    <td><?= e($item['course']) ?></td>
+                    <td><?= formatRupiah($item['total']) ?></td>
+                </tr>
+            <?php endforeach; ?>
             </tbody>
-
         </table>
+    </div>
 
-        <div style="margin-top: 20px;">
-
-            <a href="registration.php">
-                Daftar Kursus
-            </a>
-
-            <a href="index.php">
-                Beranda
-            </a>
-
-        </div>
-
-    </section>
-
+    <div class="button-row">
+        <a class="button" href="register.php">Daftar Kursus</a>
+        <a class="button button-secondary" href="index.php">Beranda</a>
+    </div>
 </main>
-
 </body>
 </html>

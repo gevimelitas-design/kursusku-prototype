@@ -26,6 +26,7 @@ function formatTanggal(string $date): string
 {
     $value = new DateTimeImmutable($date);
     return $value->format('d-m-Y');
+    
 }
 
 function e(mixed $value): string
@@ -67,4 +68,8 @@ function getLearningModeLabel(string $mode): string
         default:
             return 'Tidak diketahui';
     }
-}
+} 
+echo "<div style='background:#e8f5e9; color:#2e7d32; padding:30px; margin:30px auto; max-width:400px; text-align:center; border-radius:20px; font-family:Arial;'>";
+echo "<h2>Hasil Format Tanggal</h2>";
+echo "<h1>" . formatTanggal("2026-09-15") . "</h1>";
+echo "</div>";
